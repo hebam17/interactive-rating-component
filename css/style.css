@@ -9,8 +9,145 @@
   --medium-grey: hsl(216, 12%, 54%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
+  --circle-color: #2b343d;
   --paragraph-font-size: 15px;
   --text-font-family: "Overpass", sans-serif;
-  --font-size1: 400;
-  --font-size2: 700;
+  --font-weight1: 400;
+  --font-weight2: 700;
+  --trans: all linear 0.3s;
 }
+
+/* the content container */
+#container {
+  width: 100vw;
+  height: 100vh;
+  background: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* THE RATING COMPONENT */
+#rating-container {
+  width: 25vw;
+  border-radius: 2rem;
+  background: var(--dark-blue);
+  padding: 2rem;
+}
+
+#rinner {
+  display: flex;
+  flex-direction: column;
+}
+
+#star {
+  border-radius: 50%;
+  padding: 0.8rem;
+  background: var(--circle-color);
+  /* border: solid 1px white; */
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#rtitle {
+  color: var(--white);
+  font-family: var(--text-font-family);
+  font-weight: var(--font-weight2);
+  margin-bottom: 0;
+  font-size: 1.8rem;
+}
+
+#rtext {
+  font-size: var(--paragraph-font-size);
+  color: var(--medium-grey);
+  font-family: var(--text-font-family);
+  margin-top: 0.5rem;
+}
+
+#rnums {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.score {
+  border-radius: 100%;
+  padding: 1rem 1.3rem;
+  background: var(--circle-color);
+  /* width: fit-content; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-font-family);
+  color: var(--medium-grey);
+}
+
+#submit-btn {
+  font-family: var(--text-font-family);
+  color: var(--white);
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 0.7rem;
+  background: var(--orange);
+  border: none;
+  outline: none;
+  font-weight: var(--font-weight1);
+}
+
+/* HOVER EFFECT */
+.score:hover {
+  background: var(--orange);
+  cursor: pointer;
+  color: white;
+  transition: var(--trans);
+}
+
+#submit-btn:hover {
+  background: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+/* MEDIAQUERY */
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+  #rating-container {
+    width: 35vw;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-width: 700px) {
+  #rating-container {
+    width: 45vw;
+  }
+  #rtext {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 699px) and (min-width: 500px) {
+  #rating-container {
+    width: 60vw;
+  }
+  #rtext {
+    font-size: 1.1rem;
+  }
+  .score {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 499px) and (min-width: 375px) {
+  #rating-container {
+    width: 67vw;
+  }
+  #rtext {
+    font-size: 1rem;
+  }
+  .score {
+    font-size: var(--paragraph-font-size);
+  }
+}
+/* ////////////////// */
