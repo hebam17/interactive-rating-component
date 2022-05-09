@@ -97,6 +97,10 @@
   outline: none;
   font-weight: var(--font-weight1);
 }
+.active {
+  color: var(--white);
+  background: var(--light-grey);
+}
 
 /* HOVER EFFECT */
 .score:hover {
@@ -160,6 +164,7 @@
   border-radius: 2rem;
   background: var(--dark-blue);
   padding: 2rem 1.2rem;
+  transition: var(--trans);
 }
 
 #finner {
