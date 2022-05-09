@@ -25,6 +25,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* THE RATING COMPONENT */
@@ -151,3 +153,89 @@
   }
 }
 /* ////////////////// */
+
+/* FEEDBACK COMPONENT */
+#feedback {
+  width: 25vw;
+  border-radius: 2rem;
+  background: var(--dark-blue);
+  padding: 2rem 1.2rem;
+}
+
+#finner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#feed-text {
+  background: var(--circle-color);
+  font-family: var(--text-font-family);
+  font-size: var(--paragraph-font-size);
+  color: var(--orange);
+  border-radius: 20px;
+  text-align: center;
+  width: fit-content;
+  margin: 1.4rem auto 1.8rem;
+  padding: 0.4rem 1.2rem;
+  font-weight: var(--font-weight1);
+}
+
+#ftitle {
+  font-size: 1.8rem;
+  color: var(--white);
+  text-align: center;
+  font-family: var(--text-font-family);
+  font-weight: var(--font-weight2);
+  margin-bottom: 0;
+}
+
+#ftext {
+  text-align: center;
+  font-size: var(--paragraph-font-size);
+  font-family: var(--text-font-family);
+  color: var(--medium-grey);
+  font-weight: var(--font-weight1);
+  margin-top: 0.5rem;
+}
+
+/* MEDIAQUERY */
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+  #feedback {
+    width: 35vw;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-width: 700px) {
+  #feedback {
+    width: 45vw;
+  }
+  #ftext {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 699px) and (min-width: 500px) {
+  #feedback {
+    width: 60vw;
+  }
+  #ftext {
+    font-size: 1.1rem;
+  }
+  .feed-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 499px) and (min-width: 375px) {
+  #feedback {
+    width: 75vw;
+  }
+  #ftext {
+    font-size: 1rem;
+  }
+  .feed-text {
+    font-size: var(--paragraph-font-size);
+  }
+}
+/* ///////////////// */
