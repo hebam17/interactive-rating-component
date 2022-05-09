@@ -1,0 +1,3 @@
+-This is a simple ratings app
+-You can choose the rate and hit submit and the thanks component will pop up
+-I've choose to use html,css and vanilla js for this simple project
